@@ -27,7 +27,7 @@ class BotTelegram extends BotBase {
         let url, type, filePath
 
         if (context.message.photo) {
-            const file = await context.telegram.getFile(context.message.photo[0].file_id);
+            const file = await context.telegram.getFile(context.message.photo[context.message.photo.length-1].file_id);
 
             type = "image"
             
